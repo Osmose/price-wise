@@ -19,12 +19,19 @@ Prerequisites:
    ```sh
    npm install
    ```
+3. Build the extension:
+
+   ```sh
+   npm run build
+   ```
+4. Open `about:debugging`, click "Load Temporary add-on", and select `build/manifest.json` as the file to open. Do not use the manifest from the `src` directory.
 
 ## NPM Scripts
 
 | Command | Description |
 | --- | --- |
 | `npm run build` | Build the extension into an XPI file |
+| `npm run watch` | Watch for changes and rebuild |
 | `npm run lint` | Run linting checks |
 
 ## License
