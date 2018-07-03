@@ -1,0 +1,43 @@
+[
+  {
+    "namespace": "experiments.urlbarPill",
+    "functions": [
+      {
+        "name": "show",
+        "type": "function",
+        "async": false,
+        "parameters": [
+          {
+            "name": "tabId",
+            "type": "number"
+          },
+          {
+            "name": "options",
+            "type": "object",
+            "properties": {
+              "icon": {
+                "type": "string",
+                "optional": true
+              },
+              "label": {
+                "type": "string"
+              },
+              "textColor": {
+                "type": "string",
+                "optional": true
+              },
+              "backgroundColor": {
+                "type": "string",
+                "optional": true
+              },
+              "onClick": {
+                "type": "function",
+                "optional": true
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

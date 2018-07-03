@@ -1,6 +1,5 @@
 /* eslint-env node */
 const path = require('path');
-const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const BUILD_DIR = path.resolve(__dirname, 'build');
@@ -23,7 +22,11 @@ module.exports = {
       {from: 'src/icon.svg', to: BUILD_DIR},
       {from: 'src/sidebar.html', to: BUILD_DIR},
       {from: 'src/background.js', to: BUILD_DIR},
+      {from: 'src/in_page.js', to: BUILD_DIR},
       {from: 'src/manifest.json', to: BUILD_DIR},
+      {from: 'src/urlbar_pill_schema.json', to: BUILD_DIR},
+      {from: 'src/urlbar_pill.js', to: BUILD_DIR},
+      {from: 'src/content/urlbar_pill.css', to: path.join(BUILD_DIR, 'content')},
     ]),
   ],
 };

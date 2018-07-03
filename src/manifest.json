@@ -24,5 +24,24 @@
     "default_icon": "icon.svg",
     "default_title": "Commerce",
     "default_panel": "sidebar.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["in_page.js"]
+    }
+  ],
+  "experiment_apis": {
+    "urlbarPill": {
+      "schema": "urlbar_pill_schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "events": ["startup"],
+        "paths": [
+          ["experiments", "urlbarPill"]
+        ],
+        "script": "urlbar_pill.js"
+      }
+    }
   }
 }
