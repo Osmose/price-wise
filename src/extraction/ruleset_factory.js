@@ -253,7 +253,7 @@ export default class RulesetFactory {
 
   isVisible(fnode) {
     for (const ancestor of ancestors(fnode.element)) {
-      const style = getComputedStyle(ancestor);
+      const style = window.getComputedStyle(ancestor);
       const isElementHidden = (
         style.visibility === 'hidden'
         || style.display === 'none'

@@ -11,6 +11,7 @@
     "watch": "webpack --watch --mode=development",
     "package": "web-ext build --source-dir build --overwrite-dest",
     "lint": "bin/run_lints.sh",
+    "train": "bin/train_fathom.py",
     "test": "bin/run_tests.py"
   },
   "config": {
